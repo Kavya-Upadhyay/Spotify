@@ -1,0 +1,69 @@
+.playlistCard {
+  background-color: rgba(30, 30, 30, 0.6);
+  border-radius: 6px;
+  padding: 16px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.playlistCard:hover {
+  background-color: rgba(50, 50, 50, 0.6);
+}
+
+.playlistCard__image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.playlistCard__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.playButton {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: var(--spotify-green);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  color: black;
+}
+
+.playButton--visible {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+.playlistCard__info h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playlistCard__info p {
+  color: var(--spotify-light-gray);
+  font-size: 14px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
