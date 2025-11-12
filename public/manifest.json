@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Spotify Clone",
+  "name": "Spotify Clone - Music Streaming App",
+  "description": "A beautiful Spotify clone built with React for music streaming",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,16 +11,66 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#1DB954",
+  "background_color": "#191414",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["music", "entertainment"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "screenshots": [
+    {
+      "src": "screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "screenshot-narrow.png",
+      "sizes": "375x812",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Search Music",
+      "short_name": "Search",
+      "description": "Search for your favorite songs and artists",
+      "url": "/#/search",
+      "icons": [
+        {
+          "src": "search-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Your Library",
+      "short_name": "Library",
+      "description": "Access your music library and playlists",
+      "url": "/#/library",
+      "icons": [
+        {
+          "src": "library-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "iarc_rating_id": "e58bcf3c-9c71-41c7-9e47-ae5c36c7e5c9"
 }

@@ -1,17 +1,14 @@
 {
   "name": "spotify-clone",
   "version": "0.1.0",
+  "description": "A Spotify clone built with React",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.1.0",
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "@fortawesome/fontawesome-free": "^6.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,5 +33,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "keywords": [
+    "react",
+    "spotify",
+    "clone",
+    "music",
+    "player"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/spotify-clone"
+  },
+  "homepage": "."
 }

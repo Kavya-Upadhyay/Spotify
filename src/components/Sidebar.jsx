@@ -1,7 +1,14 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
 
 const Sidebar = ({ playlists }) => {
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
   return (
     <div className="sidebar">
       <div className="sidebar__logo">
@@ -12,25 +19,25 @@ const Sidebar = ({ playlists }) => {
       </div>
       
       <div className="sidebar__nav">
-        <div className="sidebar__navItem sidebar__navItem--active">
+        <Link to="/" className={`sidebar__navItem ${isActive('/') ? 'sidebar__navItem--active' : ''}`}>
           <i className="fas fa-home"></i>
           <span>Home</span>
-        </div>
-        <div className="sidebar__navItem">
+        </Link>
+        <Link to="/search" className={`sidebar__navItem ${isActive('/search') ? 'sidebar__navItem--active' : ''}`}>
           <i className="fas fa-search"></i>
           <span>Search</span>
-        </div>
-        <div className="sidebar__navItem">
+        </Link>
+        <Link to="/library" className={`sidebar__navItem ${isActive('/library') ? 'sidebar__navItem--active' : ''}`}>
           <i className="fas fa-book"></i>
           <span>Your Library</span>
-        </div>
+        </Link>
       </div>
 
       <div className="sidebar__nav">
-        <div className="sidebar__navItem">
+        <Link to="/create-playlist" className={`sidebar__navItem ${isActive('/create-playlist') ? 'sidebar__navItem--active' : ''}`}>
           <i className="fas fa-plus-square"></i>
           <span>Create Playlist</span>
-        </div>
+        </Link>
         <div className="sidebar__navItem">
           <i className="fas fa-heart"></i>
           <span>Liked Songs</span>
@@ -44,10 +51,10 @@ const Sidebar = ({ playlists }) => {
             {playlist.name}
           </div>
         ))}
-        <div className="sidebar__createPlaylist">
+        <Link to="/create-playlist" className="sidebar__createPlaylist">
           <i className="fas fa-plus"></i>
           <span>Create Playlist</span>
-        </div>
+        </Link>
       </div>
     </div>
   );

@@ -1,0 +1,101 @@
+.library {
+  flex: 1;
+  background: linear-gradient(180deg, #1E3264 0%, #121212 100%);
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.library__header {
+  margin-bottom: 24px;
+}
+
+.library__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.library__user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.library__user h1 {
+  font-size: 32px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--spotify-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.library__create-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: var(--spotify-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.library__create-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.library__filters {
+  display: flex;
+  gap: 16px;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  color: var(--spotify-white);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.filter-btn--active {
+  background: var(--spotify-white);
+  color: var(--spotify-black);
+}
+
+.library__content {
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .library {
+    padding: 16px;
+  }
+  
+  .library__user h1 {
+    font-size: 24px;
+  }
+  
+  .library__filters {
+    flex-wrap: wrap;
+  }
+}
